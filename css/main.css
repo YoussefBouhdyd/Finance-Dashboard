@@ -1,0 +1,96 @@
+/* Start Glabal Edit  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* End Glabal Edit  */
+
+/* Start Variable  */
+:root {
+    --main-transition : .3s;
+    --text-color: #777;
+    --blue-color: #0075FF;
+    --orange-color: #F59E0B;
+    --green-color: #22C55E;
+    --red-color: #E63946;
+}
+/* End Variable  */
+
+/* Start Header  */
+
+.main-header {
+    height: 100px;
+}
+
+/* End Header  */
+
+
+/* Start Side Bar  */
+
+.side-bar {
+    width: 250px;
+    min-height: calc(100vh - 100px);
+}
+
+.side-bar .active {
+    background-color: var(--red-color);
+}
+
+.side-bar .active > a {
+    color: #fff;
+}
+
+.side-bar li{
+    transition: var(--main-transition);
+    cursor: pointer;
+    letter-spacing: -1px;
+}
+
+.side-bar li a{
+    transition: var(--main-transition);
+}
+
+.side-bar li:hover {
+    background: var(--red-color);
+}
+
+.side-bar li:hover > a {
+    color: #fff;
+}
+
+.side-bar .upgrade img {
+    width: 90px;
+}
+
+.side-bar .upgrade a {
+    background-color: #A8DADC;
+    border-radius: 45px;
+    transition: var(--main-transition);
+}
+
+.side-bar .upgrade a:hover {
+    background-color: #56dee3;
+}
+
+.side-bar .log-out {
+    border-top: 1px solid #ccc;
+}
+/* End Side Bar  */
