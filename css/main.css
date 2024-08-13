@@ -21,6 +21,16 @@ ul {
     margin: 0;
 }
 
+::placeholder {
+    transition: var(--main-transition);
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+:focus::placeholder {
+    opacity: 0;
+}
+
 /* End Glabal Edit  */
 
 /* Start Variable  */
@@ -31,23 +41,165 @@ ul {
     --orange-color: #F59E0B;
     --green-color: #22C55E;
     --red-color: #E63946;
+    --yellow-color: #e9c424;
 }
 /* End Variable  */
 
 /* Start Header  */
 
 .main-header {
-    height: 100px;
+    height: 80px;
+}
+
+.main-header a.icon {
+    color: #333;
+    font-family: serif;
+}
+
+.main-header > input {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 35%;
+    caret-color: var(--text-color);
+    transition: var(--main-transition);
+    outline: none;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.main-header > input[type = "search"]:focus {
+    background-color: #f4efef;
+    box-shadow: 0px 0px 0px 5px #70adc838;
+    border: transparent;
+}
+
+.main-header .notify label {
+    position: relative;
+}
+
+.main-header .notify label::before {
+    content: "\f0f3";
+    font-weight: 400;
+    font-family: "Font Awesome 6 Free";
+    font-size: 20px;
+}
+
+.main-header .notify label::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--red-color);
+    position: absolute;
+    right: -5px;
+    top: -7px;
+
+}
+
+.main-header .notify label input{
+    display: none;
+}
+
+.main-header .notify label > div {
+    top: 25px;
+    display: none;
+    user-select: none;
+    box-shadow: 0px 0px 10px #bbb;
+    border-radius: 8px 8px 0 0;
+}
+
+.main-header .notify label input:checked + div {
+    display: block;
+}
+
+.main-header .notify label div h1 {
+    min-width: 450px;
+    background: #b0d5e7;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.main-header .notify label > div > div {
+    border: 1px solid #eee;
+    border-top: none;
+}
+
+.main-header .notify label > div > div > div,
+.main-header .notify label > div > div > div > div p{
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+
+.main-header .notify label > div > div > div:hover {
+    background-color: #f9f9f9;
+}
+
+.main-header .notify label > div > div > div:hover > div p {
+    color: #333;
+}
+
+.main-header .notify label div .icon {
+    padding: 8px;
+    width: 45px;
+    height: 45px;
+}
+
+.main-header .notify label div .icon i {
+    width: 25px;
+    height: 25px;
+}
+
+.main-header .social label {
+    position: relative;
+}
+
+.main-header .social label::before {
+    content: "\f142";
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main-header .social label input {
+    display: none;
+}
+
+.main-header .social label input + div {
+    width: 300px;
+    top: 20px;
+    background: #f0f0f0cc;
+    display: none;
+}
+
+.main-header .social label input:checked + div {
+    display: flex;
+}
+
+.main-header .social label input + div a {
+    flex: 1;
+    transition: var(--main-transition);
+    width: calc(100% / 3);
+}
+
+.main-header .social label input + div a:hover {
+    background-color: #ddd;
+}
+
+.main-header .social label input + div a img {
+    width: 30px;
 }
 
 /* End Header  */
-
 
 /* Start Side Bar  */
 
 .side-bar {
     width: 250px;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 80px);
 }
 
 .side-bar .active {
